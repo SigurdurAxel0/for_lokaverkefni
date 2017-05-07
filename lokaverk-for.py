@@ -1,5 +1,5 @@
 #Sigurður Axel
-#2.5.2017
+#3.5.2017
 
 
 #öll hrutaspil eru hér
@@ -56,5 +56,49 @@ hrutaspil = [{"Sokki":[41,108,7,0,17.3,108,144,8.5]},
              {"Undri":[49.1,108,8.4,76,17.2,100,109,8.4]},
              {"Ás":[48.8,121,8.1,82,17.2,108,110,8.3]},
             ]
+
+
+#á eftir að raða þessu randomly
+
+
+svar1 = " "
+while(svar1 != 3):
+    print("<---------------------------------------------------------->")
+    print("1. Spila")
+    print("2. Hvernig á ég að spila???")
+    print("3. Hætta")
+
+    svar1 = int(input("Veldu að spila: "))
+
+    if svar1 == 1:
+
+        import random
+        #öll spilin eru í röð svo að 0 væri sokki
+        stokkur = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51]
+        #listin er randomly breytur með shuffle
+        random.shuffle(stokkur)
+        #tölur fyrir framan 26 í listanum er fyrir tölvuna og aftan er fyrir spilaran
+        com = stokkur[26:]
+        player = stokkur[0:26]
+
+
+        val = " "
+        while(val != 9):
+            for key,value in hrutaspil[player[0]].items():
+                print("<---------------------------------------------------------->")
+                print("Þú átt", len(player), "spil eftir")#segir hversu mörg spil þú átt eftir
+                print("Tölvan á", len(com), "spil eftir")
+                print(key)#skirfar út nafn á fyrsta spil sem spilarin fær
+                print("1. Þyngd----------------:",value[0])
+                print("2. Mjólkurlagni dætra---:",value[1])
+                print("3. Einkunn ullar--------:",value[2])
+                print("4. Fjöldi afkvæma-------:",value[3])
+                print("5. Einkunn læris--------:",value[4])
+                print("6. Frjósemi-------------:",value[5])
+                print("7. Gerð/þykkt bakvöðvar-:",value[6])
+                print("8. Einkun fyrir malir---:",value[7])
+                print("9. Hætta")
+
+                val = int(input("Hvað er val þitt: "))
 
 

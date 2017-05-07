@@ -1,5 +1,5 @@
 #Sigurður Axel
-#6.5.2017
+#7.5.2017
 
 
 #öll hrutaspil eru hér
@@ -236,3 +236,87 @@ while(svar1 != 3):
                         print("Veldu eithvað annað")
                     else:
                         print("Rangur insláttur")
+
+                if val ==6:
+                    print("Þú valdir frjósemi")
+                    for key, value in hrutaspil[player[0]].items():
+                        þyngdPlayer = value[5]#value 5 er frjósemi hjá spilara
+                    for key, value in hrutaspil[com[0]].items():
+                        þyngdCom = value[5]#value 5 er frjósemi hjá tölvu
+                    if þyngdPlayer > þyngdCom:#spilarin vinur
+                        print("Þú varst með herri frjósemi")
+                        for key, value in hrutaspil[com[0]].items():
+                            print("Þú færð", key)
+                        take = com[0]
+                        player.insert(-1, take)#tekur spil frá hinum
+                        del com[0]
+                    elif þyngdCom > þyngdPlayer:
+                        print("Tölvan var með herri herri frjósemi")
+                        for key, value in hrutaspil[player[0]].items():
+                            print("Þú missir", key)
+                        take1 = player[0]
+                        com.insert(-1, take1)#tekur spil frá hinum 
+                        del player[0]
+                    elif þyngdCom == þyngdPlayer:
+                        print("Jafntefli")
+                        print("Veldu eithvað annað")
+                    else:
+                        print("Rangur insláttur")
+
+                if val ==7:
+                    print("Þú valdir gerð/þykkt bakvöðvar")
+                    for key, value in hrutaspil[player[0]].items():
+                        þyngdPlayer = value[6]#value 6 er gerð/þykkt bakvöðvar hjá spilara
+                    for key, value in hrutaspil[com[0]].items():
+                        þyngdCom = value[6]#value 6 er gerð/þykkt bakvöðvar hjá tölvu
+                    if þyngdPlayer > þyngdCom:#spilarin vinur
+                        print("Þú varst með herri gerð/þykkt bakvöðvar")
+                        for key, value in hrutaspil[com[0]].items():
+                            print("Þú færð", key)
+                        take = com[0]
+                        player.insert(-1, take)#tekur spil frá hinum
+                        del com[0]
+                    elif þyngdCom > þyngdPlayer:
+                        print("Tölvan var með herri gerð/þykkt bakvöðvar")
+                        for key, value in hrutaspil[player[0]].items():
+                            print("Þú missir", key)
+                        take1 = player[0]
+                        com.insert(-1, take1)#tekur spil frá hinum 
+                        del player[0]
+                    elif þyngdCom == þyngdPlayer:
+                        print("Jafntefli")
+                        print("Veldu eithvað annað")
+                    else:
+                        print("Rangur innsláttur")
+                if val ==8:
+                    print("Þú valdir Einkun fyrir malir")
+                    for key, value in hrutaspil[player[0]].items():
+                        þyngdPlayer = value[7]#value 7 er Einkun fyrir malir hjá spilara
+                    for key, value in hrutaspil[com[0]].items():
+                        þyngdCom = value[7]#value 7 er Einkun fyrir malir hjá tölvu
+                    if þyngdPlayer > þyngdCom:#spilarin vinur
+                        print("Þú varst með herri Einkun fyrir malir")
+                        for key, value in hrutaspil[com[0]].items():
+                            print("Þú færð", key)
+                        take = com[0]
+                        player.insert(-1, take)#tekur spil frá hinum
+                        del com[0]
+                    elif þyngdCom > þyngdPlayer:
+                        print("Tölvan var með herri Einkun fyrir malir")
+                        for key, value in hrutaspil[player[0]].items():
+                            print("Þú missir", key)
+                        take1 = player[0]
+                        com.insert(-1, take1)#tekur spil frá hinum 
+                        del player[0]
+                    elif þyngdCom == þyngdPlayer:
+                        print("Jafntefli")
+                        print("Veldu eithvað annað")
+                    else:
+                        print("Rangur innsláttur")
+
+
+    elif svar1 == 2:#Segir hvernig maður á að spila leikinn
+        print("Þú færð 26 spil.")
+        print("Þú færð 8 valmöguleika til að spila með.")
+        print("Ef þú ert með hærri tölu en hann þá færð þú spilið hans.")
+        print("Til þess að vinna þarft þú að taka öll spilin hans.")
